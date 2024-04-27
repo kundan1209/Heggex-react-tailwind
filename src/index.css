@@ -1,13 +1,144 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+.mont{
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 39.01px;
+  background: -webkit-linear-gradient(#06286E, #164EC0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.bodyhead{
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  width: 546px;
+  height: 29px;
+  top: 328px;
+  left: 443px;
+  gap: 50px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.lato {
+  font-family: Lato;
+  font-size: 38.26px;
+  font-weight: 700;
+  line-height: 45.91px;
+  letter-spacing: 0.02em;
+  text-align: center;
+
+}
+.flip-card {
+  margin: auto;
+  margin-top: 50px;
+  height:393px;
+  width:712px;
+  border-radius:42.51px;
+  /* background: linear-gradient(222.94deg, #051A91 -4.31%, #061C93 14.41%, #2284F1 81.88%, #1F80EB 103.81%); */
+}
+
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style:preserve-3d;
+}
+
+.flip-card.is-flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+
+.flip-card-front,
+.flip-card-back {
+  margin: auto;
+  height:393px;
+  width:712px;
+  border-radius: 42.51px;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+.content-nav-index {
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29.05px;
+  text-align: left;
+  color: #202B37;
+}
+.published-by-text{
+  color: #696671;
+  font-weight: 600;
+  font-size: 12.4px;
+}
+.foot-icon{
+  margin-right: 20px;
+  border-radius: 100%;
+  height: 80px;
+  width: 80px;
+  /* box-shadow: 10px 10px 10px 10px #164EC0; */
+  /* box-shadow:  #164EC0 0px 54px 55px,  #164EC0 0px -12px 30px, #164EC0 0px 4px 6px,  #164EC0 0px 12px 13px,  #164EC0 0px -3px 5px; */
+  /* box-shadow: rgba(60, 110, 148, 0.3) 0px 1px 2px 0px, rgba(60, 110, 148, 0.3) 0px 2px 6px 2px; */
+  box-shadow: rgba(60, 110, 148, 0.3) 0px 4px 16px, rgba(60, 110, 148, 0.3) 0px 8px 24px, rgba(118, 161, 194, 0.3) 0px 16px 56px;
+}
+.create-text{
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 39.01px;
+  background: -webkit-linear-gradient(#06286E, #164EC0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.faq-text{
+  margin-top: 80px;
+  font-family: Inter;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 58.09px;
+  letter-spacing: 0.005em;
+  text-align: left;
+  background: -webkit-linear-gradient(#06286E, #164EC0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.faq-item {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 65%;
+  border:  #164EC0 1px solid;
+  /* border-color: linear-gradient(90.26deg, #217EEC -1.17%, #082299 102.11%); */
+  margin-top: 25px;
+  border-radius: 10px;
+  transition: transform 0.8s;
+}
+.displayed {
+  transform: rotateX(180deg);
+}
+.question {
+  font-family: Inter;
+font-size: 16px;
+font-weight: 600;
+line-height: 26px;
+text-align: left;
+
+}
+.fade-in {
+  transition: opacity 1s ease;
+}
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease;
 }
