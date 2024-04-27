@@ -3,8 +3,8 @@ import React from 'react'
 export const Footer = () => {
   return (
     <div>
-      <div class="foot-logo flex justify-between mb-20 mt-14">
-        <div class="flex justify-between">
+      <div class="foot ">
+        <div class="footer-mark">
         <div class="foot-icon">
         <img alt='FootIcon' class="mx-auto my-6" src={require('../Icons/FootIcon.png')} />
         </div>

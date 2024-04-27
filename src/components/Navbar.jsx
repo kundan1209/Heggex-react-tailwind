@@ -2,9 +2,9 @@ import React from 'react'
 import '../index.css'
 export const Navbar = () => {
   return (
-    <div class="flex justify-between">
-        <img alt='MainIcon' class="w-48 h-10 top-8 left-28 gap-0" src={require('../Icons/MainIcon.png')} />
-        <div style={{color:'#3A3740'}} class="flex justify-between">
+    <div class="navbar">
+        <img alt='MainIcon' class="head-icon" src={require('../Icons/MainIcon.png')} />
+        <div style={{color:'#3A3740'}} class="nav-content">
             <p class="mt-2 mr-4">Home</p>
             <p class='mt-2 mr-4'>Flashcard</p>
             <p class='mt-2 mr-4'>Contact</p>

@@ -7,7 +7,7 @@ import { Navigation } from './Navigation';
 import { Qaf } from './Qaf';
 function App() {
   return (
-    <div class="ml-24 mt-10 mr-24 mb-96">
+    <div class="app">
     <Navbar/>
     <Navigation/>
     <Heading/>

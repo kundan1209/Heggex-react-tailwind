@@ -3,6 +3,29 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+.app {
+  /* ml-24 mt-10 mr-24 mb-96 */
+  margin-left: 96px;
+  margin-right: 96px;
+  margin-top: 40px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+.head-icon {
+  max-width: 300px;
+}
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+}
+.navigation {
+  display: flex;
+
+}
+
 .mont{
   font-family: "Montserrat", sans-serif;
   font-size: 32px;
@@ -17,7 +40,7 @@
   justify-content: space-between;
   margin-left: auto;
   margin-right: auto;
-  width: 546px;
+  max-width: 546px;
   height: 29px;
   top: 328px;
   left: 443px;
@@ -37,7 +60,8 @@
   margin: auto;
   margin-top: 50px;
   height:393px;
-  width:712px;
+  width:100%;
+  max-width: 712px;
   border-radius:42.51px;
   /* background: linear-gradient(222.94deg, #051A91 -4.31%, #061C93 14.41%, #2284F1 81.88%, #1F80EB 103.81%); */
 }
@@ -58,7 +82,9 @@
 .flip-card-back {
   margin: auto;
   height:393px;
-  width:712px;
+  width:100%;
+  max-width: 712px;
+
   border-radius: 42.51px;
   position: absolute;
   backface-visibility: hidden;
@@ -69,12 +95,24 @@
   transform: rotateY(180deg);
 }
 .content-nav-index {
+  margin-top: 6px;
   font-family: Inter;
   font-size: 24px;
   font-weight: 700;
   line-height: 29.05px;
   text-align: left;
   color: #202B37;
+}
+.body-foot {
+  /* flex justify-between  w-3/5 mx-auto my-12 px-10 */
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+  width: 57%;
+
+
 }
 .published-by-text{
   color: #696671;
@@ -90,6 +128,20 @@
   /* box-shadow:  #164EC0 0px 54px 55px,  #164EC0 0px -12px 30px, #164EC0 0px 4px 6px,  #164EC0 0px 12px 13px,  #164EC0 0px -3px 5px; */
   /* box-shadow: rgba(60, 110, 148, 0.3) 0px 1px 2px 0px, rgba(60, 110, 148, 0.3) 0px 2px 6px 2px; */
   box-shadow: rgba(60, 110, 148, 0.3) 0px 4px 16px, rgba(60, 110, 148, 0.3) 0px 8px 24px, rgba(118, 161, 194, 0.3) 0px 16px 56px;
+}
+.foot {
+  /* flex justify-between mb-20 mt-14 */
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+  margin-top: 56px;
+}
+.footer-mark{
+  /* flex justify-between mb-20 mt-14 */
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+
 }
 .create-text{
   font-family: "Montserrat", sans-serif;
@@ -129,10 +181,10 @@
 }
 .question {
   font-family: Inter;
-font-size: 16px;
-font-weight: 600;
-line-height: 26px;
-text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+  text-align: left;
 
 }
 .fade-in {
@@ -141,4 +193,55 @@ text-align: left;
 .fade-out {
   opacity: 0;
   transition: opacity 1s ease;
+}
+@media screen and (max-width: 700px) {
+
+  .flip-card-inner,
+  .flip-card-front,
+  .flip-card-back
+    {
+      width: 100%;
+  }
+  .head-icon {
+    margin-left: 50px;
+  }
+  .navbar{
+    flex-direction: column;
+
+  }
+  .body-foot {
+    width: auto;
+  }
+  .navigation{
+    flex-direction: column;
+  }
+  .nav-content {
+    margin-top: 30px;
+    gap: 15px;
+
+  }
+  .ref, .ful{
+    visibility: hidden;
+  }
+  .faq-item {
+    width: 100%;
+  }
+  .navigation-second {
+    margin-left: 32px;
+  }
+  .app {
+    margin-left: 45px;
+  }
+  .footer-mark{
+    visibility: hidden;
+  }
+  .create-text {
+    width: 500px;
+  }
+  .foot{
+    display: block;
+    margin-top: 0;
+    margin-left: 6%;
+  }
+
 }

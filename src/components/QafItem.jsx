@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useState } from 'react'
 export const QafItem = ({question, answer}) => {
     const [isDisplayed, setIsDisplayed] = useState(false);
@@ -6,19 +6,12 @@ export const QafItem = ({question, answer}) => {
     const toggleDisplay = () => {
       setIsDisplayed(!isDisplayed);
     };
-    // useEffect(()=>{
-    //     const timeout = setInterval(() => {
-    //         if
-    //     }, 4000);
-    //     return ()=>{
 
-    //     }
-    // }, [])
   return (
     <div onClick={toggleDisplay} class="faq-item">
-        <div class="flex justify-between  ">
+        <div class="flex justify-between ">
         <p class="question">{question}</p>
-        <img alt='DownArrow' className={`${isDisplayed?'displayed':''}`} src={require('../Icons/DownArrow.png')} />
+        <img alt='DownArrow' className={`h-8 w-8 ${isDisplayed?'displayed':''}`} src={require('../Icons/DownArrow.png')} />
         </div>
         <p className={`pr-20 ${isDisplayed?'fade-in':'fade-out'}`}>{isDisplayed && answer}</p>
     </div>
