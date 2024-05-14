@@ -1,1 +1,2 @@
-## Deployed version on Vercel [Vercel](https://heggex-react-tailwind.vercel.app/)
+## Deployed version on Vercel 
+[Vercel](https://heggex-react-tailwind.vercel.app/)
